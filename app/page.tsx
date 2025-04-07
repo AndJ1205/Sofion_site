@@ -5,7 +5,7 @@ export default function Page() {
   const [lang, setLang] = useState("en");
 
   useEffect(() => {
-    const userLang = navigator.language || navigator.userLanguage;
+    const userLang = navigator.language;
     setLang(userLang.startsWith("pl") ? "pl" : "en");
   }, []);
 
